@@ -9,3 +9,10 @@ dist/
 # the npm tarball (via package.json "files") as an offline fallback — npm's
 # "files" allowlist ships it regardless of this gitignore (same as dist/).
 manifest.json
+
+# Monorepo-coupled build script — needs ../../docs/openapi.json and exposes the
+# openapi→manifest internals. Deliberately excluded from the public repo.
+scripts/
+
+# Lock file is not tracked in the public repo.
+package-lock.json
