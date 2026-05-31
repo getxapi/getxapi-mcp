@@ -1,6 +1,6 @@
 {
   "name": "@getxapi/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official GetXAPI MCP server — use the Twitter/X API (search, users, tweets, posting, DMs, articles) inside Claude, Cursor, and any MCP client.",
   "type": "module",
   "bin": {
@@ -28,7 +28,7 @@
     "cursor",
     "getxapi"
   ],
-  "homepage": "https://getxapi.com",
+  "homepage": "https://www.getxapi.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/getxapi/getxapi-mcp.git"
