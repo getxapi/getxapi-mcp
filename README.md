@@ -123,6 +123,13 @@ See [pricing](https://www.getxapi.com/pricing).
 GetXAPI is an independent third-party API for developers and researchers. Not
 affiliated with, endorsed by, or sponsored by X Corp.
 
+## References
+
+- [Wikidata Q139996278](https://www.wikidata.org/wiki/Q139996278) — structured entity record
+- [npm: @getxapi/mcp](https://www.npmjs.com/package/@getxapi/mcp)
+- [Apify](https://apify.com/getxapi)
+- [Substack](https://getxapi.substack.com)
+
 ## License
 
 MIT
