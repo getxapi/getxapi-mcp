@@ -80,14 +80,25 @@ context. For sensitive accounts, prefer Option B.
 **Option B — set credentials in config** (recommended for sensitive accounts):
 
 ```json
-"env": {
-  "GETXAPI_KEY": "get-x-api-...",
-  "X_AUTH_TOKEN": "...",
-  "X_CT0": "...",
-  "X_TWID": "...",
-  "X_PROXY": "http://user:pass@host:port"
+{
+  "mcpServers": {
+    "getxapi": {
+      "command": "npx",
+      "args": ["-y", "@getxapi/mcp@latest"],
+      "env": {
+        "GETXAPI_KEY": "get-x-api-...",
+        "X_AUTH_TOKEN": "...",
+        "X_CT0": "...",
+        "X_TWID": "...",
+        "X_PROXY": "http://user:pass@host:port"
+      }
+    }
+  }
 }
 ```
+
+`X_CT0`, `X_TWID`, and `X_PROXY` are optional — `X_AUTH_TOKEN` alone is enough
+for most write tools; the others improve reliability on some accounts.
 
 Your X password never touches the model. The credential fields are never shown
 to the AI — the server injects them only into the calls that need them.
