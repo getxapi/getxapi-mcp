@@ -1,0 +1,5 @@
+title: GetXAPI MCP Server
+description: MCP server for the GetXAPI Twitter / X data API. 44 endpoints across reads and writes.
+theme: jekyll-theme-minimal
+url: https://getxapi.github.io
+baseurl: /getxapi-mcp
