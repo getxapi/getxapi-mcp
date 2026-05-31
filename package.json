@@ -1,0 +1,45 @@
+{
+  "name": "@getxapi/mcp",
+  "version": "0.1.0",
+  "description": "Official GetXAPI MCP server — use the Twitter/X API (search, users, tweets, posting, DMs, articles) inside Claude, Cursor, and any MCP client.",
+  "type": "module",
+  "bin": {
+    "getxapi-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "manifest.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:manifest": "node scripts/build-manifest.mjs",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitter",
+    "x",
+    "twitter-api",
+    "x-api",
+    "claude",
+    "cursor",
+    "getxapi"
+  ],
+  "homepage": "https://getxapi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getxapi/getxapi-mcp.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^5.5.0"
+  }
+}

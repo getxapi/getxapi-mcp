@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+
+# Generated artifact — derived from the OpenAPI spec, served live at
+# api.getxapi.com/mcp/manifest. Not committed to the repo. Still bundled into
+# the npm tarball (via package.json "files") as an offline fallback — npm's
+# "files" allowlist ships it regardless of this gitignore (same as dist/).
+manifest.json
