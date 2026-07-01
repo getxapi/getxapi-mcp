@@ -1,0 +1,51 @@
+# Smithery configuration for @getxapi/mcp
+# Docs: https://smithery.ai/docs/build/project-config
+#
+# Local stdio server installed via npx. Read tools need only GETXAPI_KEY.
+# Write / private tools (post, DM, like, publish article, etc.) additionally
+# need an X account's auth cookies (optional below).
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - getxapiKey
+    properties:
+      getxapiKey:
+        type: string
+        title: GetXAPI Key
+        description: >-
+          Your GetXAPI API key from the dashboard at https://www.getxapi.com.
+          Required for all read tools (search, users, tweets, followers, etc.).
+      xAuthToken:
+        type: string
+        title: X auth_token (optional)
+        description: >-
+          X account auth_token cookie. Only needed to enable write / private
+          tools (post, reply, like, retweet, send DM, publish article).
+      xCt:
+        type: string
+        title: X ct0 (optional)
+        description: >-
+          X account ct0 (CSRF) cookie. Provide alongside xAuthToken to enable
+          write / private tools.
+      xTwid:
+        type: string
+        title: X twid (optional)
+        description: >-
+          X account twid cookie. Provide alongside xAuthToken and xCt for
+          write / private tools.
+  commandFunction: |
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@getxapi/mcp@latest'],
+      env: {
+        GETXAPI_KEY: config.getxapiKey,
+        ...(config.xAuthToken ? { X_AUTH_TOKEN: config.xAuthToken } : {}),
+        ...(config.xCt ? { X_CT: config.xCt } : {}),
+        ...(config.xTwid ? { X_TWID: config.xTwid } : {}),
+      },
+    })
+  exampleConfig:
+    getxapiKey: get-x-api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
