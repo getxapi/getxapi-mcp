@@ -1,15 +1,15 @@
-# GetXAPI MCP — Twitter/X API for Claude, Cursor & any MCP client
+# GetXAPI MCP: Twitter/X API for Claude, Cursor and any MCP client
 
 [![npm](https://img.shields.io/npm/v/@getxapi/mcp.svg)](https://www.npmjs.com/package/@getxapi/mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 The official **[GetXAPI](https://www.getxapi.com)** MCP server. Give your AI assistant
-direct access to the Twitter/X API — **search tweets, look up users, read
-replies and followers, and post tweets, send DMs, manage articles, and more** —
+direct access to the Twitter/X API: **search tweets, look up users, read
+replies and followers, and post tweets, send DMs, manage articles, and more**,
 through one [Model Context Protocol](https://modelcontextprotocol.io) server.
 
 Unlike read-only Twitter MCP servers, GetXAPI MCP can **act**: post tweets,
-reply, like, retweet, send DMs, and publish articles — not just read.
+reply, like, retweet, send DMs, and publish articles, not just read.
 
 → **[Get a free API key at getxapi.com](https://www.getxapi.com)** · **[API docs](https://docs.getxapi.com)** · **[Pricing](https://www.getxapi.com/pricing)** ($0.001/call, $0.05 per 1,000 tweets)
 
@@ -52,7 +52,7 @@ Once installed, just ask your assistant naturally:
 > "Search tweets about OpenAI from the last week"
 > "Who are @vercel's verified followers?"
 > "Get the replies to this tweet: 1799…"
-> "Post 'shipping 🚀' to my X account"   *(requires X auth — see below)*
+> "Post 'shipping 🚀' to my X account"   *(requires X auth, see below)*
 
 ---
 
@@ -68,7 +68,7 @@ Once installed, just ask your assistant naturally:
 Write and private tools act on a real X account, so they need that account's
 auth. Two ways to provide it:
 
-**Option A — log in through the assistant** (convenient):
+**Option A, log in through the assistant** (convenient):
 
 > "Log in to my X account"
 
@@ -77,7 +77,7 @@ session for write tools.
 ⚠️ Your X password is passed as tool arguments, so it transits the AI model's
 context. For sensitive accounts, prefer Option B.
 
-**Option B — set credentials in config** (recommended for sensitive accounts):
+**Option B, set credentials in config** (recommended for sensitive accounts):
 
 ```json
 {
@@ -97,11 +97,11 @@ context. For sensitive accounts, prefer Option B.
 }
 ```
 
-`X_CT0`, `X_TWID`, and `X_PROXY` are optional — `X_AUTH_TOKEN` alone is enough
+`X_CT0`, `X_TWID`, and `X_PROXY` are optional. `X_AUTH_TOKEN` alone is enough
 for most write tools; the others improve reliability on some accounts.
 
 Your X password never touches the model. The credential fields are never shown
-to the AI — the server injects them only into the calls that need them.
+to the AI. The server injects them only into the calls that need them.
 
 ---
 
