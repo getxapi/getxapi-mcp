@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@getxapi/mcp.svg)](https://www.npmjs.com/package/@getxapi/mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Status](https://img.shields.io/badge/status-getxapi.com%2Fstatus-green.svg)](https://www.getxapi.com/status)
 
 The official **[GetXAPI](https://www.getxapi.com)** MCP server. Give your AI assistant
 direct access to the Twitter/X API: **search tweets, look up users, read
@@ -113,9 +114,15 @@ See [pricing](https://www.getxapi.com/pricing).
 
 ---
 
+## Related repositories
+
+- [twitter-api-alternatives](https://github.com/getxapi/twitter-api-alternatives): all 73 endpoints, per-1,000-tweet cost math and the X API v2 migration map
+- [getxapi-examples](https://github.com/getxapi/getxapi-examples): runnable samples in curl, Python, Node.js, Go, Rust, PHP, Ruby and Java
+
 ## Links
 
 - 🌐 **Website:** [getxapi.com](https://www.getxapi.com)
+- 📈 **Status:** [getxapi.com/status](https://www.getxapi.com/status)
 - 📚 **API docs:** [docs.getxapi.com](https://docs.getxapi.com)
 - 💳 **Pricing:** [getxapi.com/pricing](https://www.getxapi.com/pricing)
 - 🔑 **Get an API key:** [getxapi.com](https://www.getxapi.com)
